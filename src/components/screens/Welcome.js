@@ -1,6 +1,6 @@
 import { Button } from '@rneui/themed';
-import React from 'react'
-import { View, Image, Text } from 'react-native'
+import React, { useEffect } from 'react'
+import { View, Image, Text, TouchableOpacity } from 'react-native'
 
 const WelcomeScreen = ({ navigation }) => {
     const registerClick = () => {
@@ -11,6 +11,12 @@ const WelcomeScreen = ({ navigation }) => {
         navigation.navigate("Login")
     }
 
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.navigate("Login")
+        }, 5000);
+    }, [])
+
     return (
         <>
             <View>
@@ -18,23 +24,26 @@ const WelcomeScreen = ({ navigation }) => {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    paddingTop: 100,
+                    paddingTop: 200,
                     paddingBottom: 80
                 }}>
-                    <Image source={require("../../storage/images/welcome.png")} style={{
-                        width: 300,
-                        height: 300
-                    }} />
-                    <Text style={{
-                        paddingTop: 20,
-                        fontSize: 24,
-                        fontWeight: 'bold',
-                        color: '#798777'
-                    }}>
-                        Artella
-                    </Text>
+                    <TouchableOpacity onPress={loginClick}>
+                        <Image source={require("../../storage/images/welcome.png")} style={{
+                            width: 300,
+                            height: 300
+                        }} />
+                        <Text style={{
+                            paddingTop: 20,
+                            fontSize: 24,
+                            fontWeight: 'bold',
+                            color: '#798777',
+                            textAlign: 'center'
+                        }}>
+                            Artella
+                        </Text>
+                    </TouchableOpacity>
                 </View>
-                <View style={{
+                {/* <View style={{
                     flexDirection: 'row',
                     alignItems: 'center',
                     justifyContent: 'center'
@@ -59,7 +68,7 @@ const WelcomeScreen = ({ navigation }) => {
                     }} titleStyle={{
                         fontSize: 12
                     }} title='Login' color='#8D9D8A' />
-                </View>
+                </View> */}
             </View>
         </>
     )
