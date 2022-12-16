@@ -12,6 +12,10 @@ const LoginScreen = ({ navigation }) => {
         navigation.navigate("BottomTab")
     }
 
+    const registerPageClick = () => {
+        navigation.navigate("FirstPageRegister")
+    }
+
     return (
         <View style={{
             paddingHorizontal: 40,
@@ -29,7 +33,6 @@ const LoginScreen = ({ navigation }) => {
             }}>
                 Artella
             </Text>
-            {/* Profile Picture */}
             <View>
                 <Text>
                     Email
@@ -69,6 +72,17 @@ const LoginScreen = ({ navigation }) => {
                     fontSize: 14,
                     fontWeight: 'bold'
                 }} title='Login ' />
+            </View>
+            <View style={{
+                marginTop: 10
+            }}>
+                <Button onPress={registerPageClick} buttonStyle={{
+                    borderColor: 'black',
+                    borderRadius: 8
+                }} titleStyle={{
+                    fontSize: 14,
+                    color: 'black',
+                }} type='outline' title="Don't have an account ?" />
             </View>
             <View style={{
                 marginTop: 15

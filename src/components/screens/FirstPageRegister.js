@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, TextInput } from 'react-native'
+import { View, Text, TextInput, Image } from 'react-native'
 import { Button } from '@rneui/base'
 
 const FirstPageRegister = ({ navigation }) => {
@@ -13,7 +13,7 @@ const FirstPageRegister = ({ navigation }) => {
             minHeight: '100%',
             backgroundColor: 'white',
             flexDirection: 'column',
-            paddingVertical: 220
+            paddingVertical: 150
 
         }}>
             <Text style={{
@@ -24,7 +24,17 @@ const FirstPageRegister = ({ navigation }) => {
             }}>
                 Artella
             </Text>
-            {/* Profile Picture */}
+            <View style={{
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingVertical: 20
+            }}>
+                <Image style={{
+                    width: 150,
+                    height: 150,
+                }} source={require("../../storage/images/pic.png")} />
+            </View>
             <View>
                 <Text>
                     Full Name

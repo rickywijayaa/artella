@@ -17,14 +17,14 @@ const SearchContent = (props) => {
                     suggestedSearchData.map((data, index) => {
                         return (
                             <>
-                                <View key={index} style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                                <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                                     {data.images.map(img => {
                                         return (
                                             <TouchableOpacity
                                                 onPressIn={() => props.openImage(img)} style={{ paddingBottom: 2 }}
                                                 onPressOut={() => props.openImage(null)}
                                             >
-                                                <Image key={index} source={img} style={{ width: 137, height: 150 }} />
+                                                <Image source={img} style={{ width: 137, height: 150 }} />
                                             </TouchableOpacity>
                                         )
                                     })}

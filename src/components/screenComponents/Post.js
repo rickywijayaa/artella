@@ -46,7 +46,7 @@ const Post = () => {
                                 {/* </DoubleClick> */}
                             </View>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                                <View style={{ padding: 5, flexDirection: 'row', alignItems: 'center' }}>
+                                <View style={{ paddingVertical: 5, paddingHorizontal: 15, flexDirection: 'row', alignItems: 'center' }}>
                                     <TouchableOpacity onPress={() => setIsLiked(!liked)}>
                                         <AntDesign name={liked ? "heart" : "hearto"}
                                             style={{
@@ -63,13 +63,13 @@ const Post = () => {
                                 </View>
                             </View>
                             <View>
-                                <Text style={{ paddingHorizontal: 5 }}>
+                                <Text style={{ paddingHorizontal: 15 }}>
                                     Liked By {liked ? 'You and ' : ''}
                                     {liked ? data.likes + 1 : data.likes} Others
                                 </Text>
                             </View>
                             <View>
-                                <Text style={{ padding: 5 }}>
+                                <Text style={{ paddingVertical: 5, paddingHorizontal: 15 }}>
                                     {data.description}
                                 </Text>
                             </View>

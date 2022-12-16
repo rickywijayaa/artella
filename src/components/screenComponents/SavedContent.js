@@ -11,7 +11,7 @@ const SavedContent = () => {
                         return (
                             <>
                                 <View key={index} style={{ paddingVertical: 2 }}>
-                                    <Image key={index} source={data.image} style={{ width: 122, height: 150, paddingVertical: 10 }} />
+                                    <Image source={data.image} style={{ width: 122, height: 150, paddingVertical: 10 }} />
                                 </View>
                             </>
                         )

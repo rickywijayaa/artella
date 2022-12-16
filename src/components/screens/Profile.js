@@ -57,7 +57,7 @@ const Profile = () => {
                 <View style={{ marginTop: 10, flexDirection: 'row', paddingHorizontal: 35 }}>
                     <TouchableOpacity onPress={() => setModal(!modal)} activeOpacity={0}>
                         <View style={{
-                            width: 160,
+                            width: 350,
                             height: 35,
                             marginRight: 10,
                             borderRadius: 5,
@@ -74,7 +74,7 @@ const Profile = () => {
                             </Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity activeOpacity={0}>
+                    {/* <TouchableOpacity activeOpacity={0}>
                         <View style={{
                             marginLeft: 10,
                             width: 160,
@@ -92,7 +92,7 @@ const Profile = () => {
                                 Profile Setting
                             </Text>
                         </View>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
                 <View style={{ paddingHorizontal: 35, marginTop: 20 }}>
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
