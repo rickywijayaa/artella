@@ -21,7 +21,7 @@ const Search = () => {
             position: 'relative',
         }}>
             <ScrollView showsVerticalScrollIndicator={false}>
-                <SearchBox />
+                {/* <SearchBox /> */}
                 <SearchContent openImage={getImageData} />
             </ScrollView>
             {

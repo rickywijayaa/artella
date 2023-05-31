@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, StatusBar, ScrollView } from 'react-native'
 import Post from '../screenComponents/Post'
 

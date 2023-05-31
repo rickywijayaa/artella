@@ -33,6 +33,8 @@ export const PostList = [
     },
 ]
 
+export const baseUrlImg = require("../storage/images/download.png")
+
 export const SearchContentData = [
     {
         id: 1,
